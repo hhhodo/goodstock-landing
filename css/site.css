@@ -62,14 +62,14 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 /* ---------- hero (video) ---------- */
 /* nav가 fixed로 겹치므로 상단 여백을 nav 높이(80px)만큼 확보, 화면 전체 높이로 중앙정렬 */
 .hero{position:relative;min-height:100vh;color:var(--text-default-inverse);
-  display:flex;align-items:center;justify-content:flex-start;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
   padding-top:80px;}
 .hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
 .hero__dim{position:absolute;inset:0;z-index:1;background:rgba(5,5,20,.5);}
 /* .container--flush의 margin-inline:auto가 flex 아이템인 이 요소를 좌우로 스스로
    가운데 정렬시켜버려서(justify-content:flex-start 무시) devtools상 좌우 마진이
    잡혔던 문제 — auto 마진을 0으로 눌러 순수 padding-inline(50px)만 남김 */
-.hero__content{position:relative;z-index:2;text-align:left;max-width:1200px;margin-inline:0;}
+.hero__content{position:relative;z-index:2;text-align:center;max-width:1200px;margin-inline:auto;}
 .hero__title{font-weight:var(--fw-base);word-break:keep-all;
   font-size:clamp(36px,6vw,100px);line-height:1.2;letter-spacing:-0.01em;}
 .hero__sub{margin-bottom:var(--space-6);font-size:20px; color:yellow ;}
