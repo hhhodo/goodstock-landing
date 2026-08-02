@@ -41,12 +41,20 @@
 
 <main id="top">
 
-  <!-- 1. HERO -->
+  <!-- 1. HERO — 영상 배경 버전(이전 이미지 버전은 archive/hero-image-version.md에 백업) -->
   <section class="hero">
-    <div class="container--flush">
-      <img class="hero__illustration" src="assets/images/milad-fakurian-Y7jY9iblRKM-unsplash.png" alt="" data-reveal aria-hidden="true">
+    <video class="hero__video" autoplay muted loop playsinline
+      poster="assets/images/hero-video-poster.jpg" aria-hidden="true">
+      <source src="assets/images/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero__dim" aria-hidden="true"></div>
+    <div class="container--flush hero__content">
       <h1 class="hero__title" data-reveal>신선함이 이어지는<br>유통의 미래를<br>그립니다</h1>
+      <p class="hero__sub" data-reveal>소싱부터 재고, 물류, 매장 운영까지 — 굿스탁이 F&amp;B·유통 브랜드의 성장을 잇습니다.</p>
     </div>
+    <a href="#services" class="hero__scroll" aria-label="다음 섹션으로 스크롤">
+      <span class="hero__scroll-line"></span>
+    </a>
   </section>
 
   <!-- 2. SERVICES -->
