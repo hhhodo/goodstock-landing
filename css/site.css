@@ -72,10 +72,12 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 /* ---------- services (masonry 4-col) ---------- */
 .services__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--grid-gutter-sm);}
 .services__col{display:flex;flex-direction:column;gap:var(--grid-gutter-sm);}
-.service-card{position:relative;overflow:hidden;}
-.service-card--tall{flex:1.35;}
-.service-card--short{flex:0.85;}
-.service-card--even{flex:1;}
+/* Figma 실측 컬럼별 카드 높이쌍(460+460 / 300+620 / 460+460 / 620+300, 카드폭 462.5px)을
+   비율로 환산 — flex:N만으로는 컬럼에 정의된 높이가 없어 카드가 0px로 접혀버렸던 버그 수정 */
+.service-card{position:relative;overflow:hidden;width:100%;}
+.service-card--even{aspect-ratio:1/1;}
+.service-card--short{aspect-ratio:3/2;}
+.service-card--tall{aspect-ratio:3/4;}
 .service-card__label{position:absolute;left:0;bottom:0;padding:var(--space-4);color:var(--text-default-inverse);
   text-shadow:0 1px 8px rgba(0,0,0,.35);}
 .service-card__label .kr{display:block;font-weight:var(--fw-strong);}
