@@ -2,6 +2,12 @@
 
 .gcell{min-width:0;}
 
+/* Figma 실측: 콘텐츠 폭이 뷰포트 대비 50px 패딩만 두고 거의 풀블리드에 가까움(.container의
+   1440px 고정폭/80px 거터와 다름) — 이 페이지 전 섹션은 이 값을 그대로 사용 */
+.container--flush{width:100%;max-width:none;padding-inline:50px;margin-inline:auto;}
+@media (max-width:1024px){.container--flush{padding-inline:40px;}}
+@media (max-width:768px){.container--flush{padding-inline:20px;}}
+
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;left:0;right:0;z-index:100;background:var(--color-canvas);
   border-bottom:var(--border-1);transition:background .2s ease;}
