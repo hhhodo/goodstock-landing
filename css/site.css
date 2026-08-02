@@ -55,7 +55,8 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
   background-image:radial-gradient(circle,var(--color-primary-700) 1.5px,transparent 1.5px);
   background-size:28px 28px;
   padding-block:calc(80px + var(--space-9)) var(--space-11);overflow:hidden;}
-.hero__illustration{width:min(480px,70%);aspect-ratio:1/1;margin-inline:auto;margin-bottom:var(--space-9);}
+.hero__illustration{display:block;width:min(480px,70%);aspect-ratio:1/1;object-fit:cover;
+  margin-inline:auto;margin-bottom:var(--space-9);}
 .hero__title{text-align:center;font-weight:var(--fw-base);
   font-size:clamp(36px,7vw,140px);line-height:0.92;letter-spacing:-0.01em;}
 .hero__sub{text-align:center;margin-top:var(--space-6);color:var(--text-subtle-inverse);}
@@ -80,6 +81,7 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 .service-card--even{aspect-ratio:1/1;}
 .service-card--short{aspect-ratio:3/2;}
 .service-card--tall{aspect-ratio:3/4;}
+.service-card__photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
 /* ISSUE CHECK 카드와 동일한 딤드 그라디언트 적용(라벨 가독성 확보) */
 .service-card::after{content:"";position:absolute;inset:0;pointer-events:none;
   background-image:linear-gradient(180deg,rgba(20,15,38,0) 0%,rgba(15,10,31,.2) 20%,
@@ -99,7 +101,7 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 }
 
 /* ---------- intro (5-7) ---------- */
-.intro__img{aspect-ratio:4/3;}
+.intro__img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;}
 /* Figma 실측(27:7495 "MATEPLUS"): 36px, SemiBold(600), tracking -0.64px */
 .intro__brand{font-size:36px;font-weight:600;letter-spacing:-0.018em;margin-bottom:var(--space-5);}
 .intro__body{color:var(--text-subtle);margin-bottom:var(--space-6);}
@@ -117,6 +119,7 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 
 .news-card{position:relative;aspect-ratio:446/545;overflow:hidden;
   padding:32px 28px;display:flex;flex-direction:column;justify-content:flex-end;gap:var(--space-5);}
+.news-card__photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
 .news-card::after{content:"";position:absolute;inset:0;pointer-events:none;
   background-image:linear-gradient(180deg,rgba(20,15,38,0) 0%,rgba(15,10,31,.2) 20%,
     rgba(10,8,26,.45) 40%,rgba(5,5,20,.65) 55%,rgba(5,5,20,.65) 100%);}
@@ -147,7 +150,7 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
   letter-spacing:-0.01em;color:var(--text-default);}
 .insights__side--left{text-align:right;}
 .insights__side--right{text-align:left;}
-.insights__center{position:relative;width:min(500px,32vw);aspect-ratio:500/637;}
+.insights__center{position:relative;display:block;width:min(500px,32vw);aspect-ratio:500/637;object-fit:cover;}
 
 @media (max-width:768px){
   .insights__row{grid-template-columns:1fr;gap:var(--space-6);}
