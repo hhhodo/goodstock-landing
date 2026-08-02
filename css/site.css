@@ -41,6 +41,14 @@
 [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
 [data-reveal].is-visible{opacity:1;transform:translateY(0);}
 
+/* ---------- typography override ----------
+   Figma 실측(get_design_context): 헤딩류 전부 Pretendard Regular(400).
+   "OUR SERVICES"/"TRACK RECORDS" 120px, 히어로 헤드라인 140px — styles.css 기본
+   토큰(56px/700 Bold)보다 훨씬 크고 훨씬 얇음. 뷰포트에 맞춰 clamp로 스케일. */
+h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
+.display-thin{font-weight:var(--fw-base);line-height:0.94;letter-spacing:-0.02em;
+  font-size:clamp(32px,5.6vw,120px);}
+
 /* ---------- hero ---------- */
 /* nav가 fixed로 겹치므로 상단 여백을 nav 높이(80px) + 섹션 여백만큼 확보 */
 .hero{position:relative;background-color:var(--color-primary-900);color:var(--text-default-inverse);
@@ -48,9 +56,9 @@
   background-size:28px 28px;
   padding-block:calc(80px + var(--space-9)) var(--space-11);overflow:hidden;}
 .hero__illustration{width:min(480px,70%);aspect-ratio:1/1;margin-inline:auto;margin-bottom:var(--space-9);}
-.hero__title{text-align:center;font-size:var(--fs-display-sm);font-weight:var(--fw-strong);
-  line-height:var(--lh-display);letter-spacing:var(--display-tracking);}
-.hero__sub{text-align:center;margin-top:var(--space-5);color:var(--text-subtle-inverse);}
+.hero__title{text-align:center;font-weight:var(--fw-base);
+  font-size:clamp(36px,7vw,140px);line-height:0.92;letter-spacing:-0.01em;}
+.hero__sub{text-align:center;margin-top:var(--space-6);color:var(--text-subtle-inverse);}
 
 @media (max-width:768px){
   .hero{background-size:20px 20px;}
@@ -94,7 +102,7 @@
 .news-card__img{aspect-ratio:4/5;background:var(--color-primary-900);position:relative;}
 .news-card__tag{position:absolute;top:var(--space-4);left:var(--space-4);color:var(--text-default-inverse);
   font-size:var(--fs-badge);font-weight:var(--fw-strong);}
-.news-card__title{margin-top:var(--space-4);}
+.news-card__title{margin-top:var(--space-4);font-weight:600;letter-spacing:-0.03em;}
 .news-card__date{margin-top:var(--space-2);color:var(--text-subtle);font-size:var(--fs-badge);}
 
 @media (max-width:1024px){
