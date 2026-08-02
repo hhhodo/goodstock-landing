@@ -101,6 +101,11 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
   object-fit: cover;
   display: block;
 }
+.video__dim{position:absolute;inset:0;background:rgba(5,5,20,.45);}
+.video__caption{position:absolute;inset:0;z-index:1;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding-inline:50px;}
+.video__caption p{color:var(--text-default-inverse);font-weight:600;
+  font-size:clamp(24px,3.4vw,44px);line-height:1.4;max-width:900px;}
 
 /* ---------- section head ---------- */
 /* Figma 실측(27:7410 Paragraph): 26px, Pretendard Medium(500) */
