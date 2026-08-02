@@ -104,13 +104,27 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 .intro__list .k{width:9em;flex:none;font-weight:600;}
 .intro__list .v{color:var(--text-subtle);}
 
-/* ---------- news (4-col x2) ---------- */
+/* ---------- news (4-col x2) ----------
+   Figma 실측(27:7972 카드 446x545, 27:7980/27:7982 카드 바깥 메타):
+   카드 = 이미지 + 하단 다크 그라디언트(측정값 그대로) 위에 인카드 헤드라인(24px, 원본 Bold→
+   페이지 2웨이트 규칙에 맞춰 600으로 통일)과 브랜드명+구분선 오버레이. 카드 아래 별도로
+   [태그]헤드라인(20px/600) + 날짜(16px, 원본 Medium→400) 메타 텍스트가 붙는 2단 구조. */
 .news__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--grid-gutter-md);}
-.news-card__img{aspect-ratio:4/5;background:var(--color-primary-900);position:relative;}
-.news-card__tag{position:absolute;top:var(--space-4);left:var(--space-4);color:var(--text-default-inverse);
-  font-size:var(--fs-badge);font-weight:600;}
-.news-card__title{margin-top:var(--space-4);font-weight:600;letter-spacing:-0.03em;}
-.news-card__date{margin-top:var(--space-2);color:var(--text-subtle);font-size:var(--fs-badge);}
+
+.news-card{position:relative;aspect-ratio:446/545;border-radius:16px;overflow:hidden;
+  padding:32px 28px;display:flex;flex-direction:column;justify-content:flex-end;gap:var(--space-5);}
+.news-card::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(180deg,rgba(20,15,38,.1) 0%,rgba(15,10,31,.5) 20%,
+    rgba(10,8,26,.92) 40%,rgb(5,5,20) 55%,rgb(5,5,20) 100%);}
+.news-card__title{position:relative;z-index:1;color:var(--text-default-inverse);
+  font-size:24px;font-weight:600;line-height:34px;letter-spacing:-0.015em;}
+.news-card__footer{position:relative;z-index:1;display:flex;align-items:center;gap:var(--space-5);}
+.news-card__footer span:first-child{flex:none;font-size:14px;color:var(--text-subtle-inverse);}
+.news-card__rule{flex:1 0 0;height:1px;background:var(--color-placeholder);}
+
+.news-item__headline{margin-top:var(--space-5);font-size:20px;font-weight:600;letter-spacing:-0.03em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.news-item__date{margin-top:var(--space-3);color:rgba(0,0,0,.7);font-size:16px;letter-spacing:-0.03em;}
 
 @media (max-width:1024px){
   .news__grid{grid-template-columns:repeat(2,1fr);}
