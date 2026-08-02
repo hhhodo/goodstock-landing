@@ -1,0 +1,236 @@
+<!-- variant: typo=medium / image=high / color=mono / image-radius=sharp / card-radius=sharp / button-radius=sharp / border=hairline / button-style=solid+outline / fw=700/400 / spacing=space-11 -->
+<!--
+  layout:
+  1. Header       — full-bleed (sticky, 로고 + 인페이지 앵커 내비게이션만 — 별도 페이지 이동 요소 없음)
+  2. Hero         — full-bleed dark, 중앙정렬 육각 그래픽 + 3줄 대형 헤드라인(Figma 실측: 히어로 헤드라인 x50~1870, y713 풀폭 블록)
+  3. Services     — 4열 매소너리 카드 그리드(Figma 실측: 4컬럼 462.5px, gap 10px, 컬럼별 460+460 / 300+620 / 460+460 / 620+300 비대칭 페어링)
+  4. Intro        — 5-7 (이미지 좌 / 브랜드 소개+정보 리스트 우)
+  5. News         — 4열×2행 카드 그리드(Figma 실측: 4컬럼 446px, gap 12px) — 탭/검색/더보기 버튼은 페이지 이동형 요소로 제외
+  6. Insights     — full-bleed 6-6 (좌우 대형 라벨 + 중앙 이미지, Figma 실측: 1920×1080 밴드 2단)
+  7. Track Records — full-bleed dark, 통계 3열
+  8. Footer       — full-bleed dark
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOODSTOCK — F&amp;B·유통 브랜드의 소싱부터 물류까지</title>
+<meta name="description" content="상품 소싱, 재고관리, 콜드체인 물류, 매장 운영까지 F&B·유통 브랜드의 성장을 잇는 굿스탁입니다.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/site.css">
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav__row">
+    <a href="#top" class="nav__mark">GOODSTOCK</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#services">서비스</a>
+      <a href="#intro">소개</a>
+      <a href="#news">뉴스</a>
+      <a href="#insights">인사이트</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M0 1H22" stroke="currentColor" stroke-width="1.5"/><path d="M0 8H22" stroke="currentColor" stroke-width="1.5"/><path d="M0 15H22" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__mark" aria-hidden="true">
+        <svg class="hero__hex" viewBox="0 0 220 200" fill="none">
+          <polygon points="110,4 210,56 210,150 110,196 10,150 10,56"/>
+          <polygon points="110,34 184,70 184,138 110,166 36,138 36,70"/>
+          <circle cx="110" cy="100" r="6"/>
+        </svg>
+      </div>
+      <h1 class="hero__title" data-reveal>신선함이 이어지는<br>유통의 미래를<br>그립니다</h1>
+      <p class="hero__sub" data-reveal>소싱부터 재고, 물류, 매장 운영까지 — 굿스탁이 F&amp;B·유통 브랜드의 성장을 잇습니다.</p>
+    </div>
+  </section>
+
+  <!-- 2. SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <h2 class="h1">OUR SERVICES</h2>
+        <p class="section-head__eyebrow subtle">소싱부터 매장 운영까지, 유통 전 과정의 전문 서비스를 만나보세요.</p>
+      </div>
+      <div class="services__grid">
+        <div class="services__col">
+          <div class="service-card service-card--even img" data-reveal>
+            <span class="service-card__label"><span class="kr">상품소싱</span><span class="en">PRODUCT SOURCING</span></span>
+          </div>
+          <div class="service-card service-card--even img" data-reveal>
+            <span class="service-card__label"><span class="kr">재고관리</span><span class="en">INVENTORY MANAGEMENT</span></span>
+          </div>
+        </div>
+        <div class="services__col">
+          <div class="service-card service-card--short img" data-reveal>
+            <span class="service-card__label"><span class="kr">콜드체인물류</span><span class="en">COLD CHAIN LOGISTICS</span></span>
+          </div>
+          <div class="service-card service-card--tall img" data-reveal>
+            <span class="service-card__label"><span class="kr">매장운영지원</span><span class="en">STORE OPERATIONS</span></span>
+          </div>
+        </div>
+        <div class="services__col">
+          <div class="service-card service-card--even img" data-reveal>
+            <span class="service-card__label"><span class="kr">유통데이터분석</span><span class="en">DISTRIBUTION ANALYTICS</span></span>
+          </div>
+          <div class="service-card service-card--even img" data-reveal>
+            <span class="service-card__label"><span class="kr">브랜드마케팅</span><span class="en">BRAND MARKETING</span></span>
+          </div>
+        </div>
+        <div class="services__col">
+          <div class="service-card service-card--tall img" data-reveal>
+            <span class="service-card__label"><span class="kr">품질안전관리</span><span class="en">QUALITY &amp; SAFETY</span></span>
+          </div>
+          <div class="service-card service-card--short img" data-reveal>
+            <span class="service-card__label"><span class="kr">유통네트워크</span><span class="en">DISTRIBUTION NETWORK</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. INTRO — 5-7 -->
+  <section class="intro section" id="intro">
+    <div class="container">
+      <div class="grid">
+        <div class="gcell" style="grid-column:1/6" data-reveal>
+          <span class="img intro__img"></span>
+        </div>
+        <div class="gcell" style="grid-column:6/13" data-reveal>
+          <p class="intro__brand h2">GOODSTOCK</p>
+          <p class="intro__body body-1 measure">굿스탁은 F&amp;B·유통 브랜드의 소싱, 재고, 물류, 매장 운영까지 아우르는 전문 파트너입니다.
+            2016년부터 유통 현장의 데이터를 축적해 안정적이고 지속가능한 성장 솔루션을 제공합니다.</p>
+          <ul class="intro__list">
+            <li><span class="k">설립연도</span><span class="v">2016년</span></li>
+            <li><span class="k">파트너 브랜드</span><span class="v">150개 이상</span></li>
+            <li><span class="k">취급 카테고리</span><span class="v">신선식품, 가공식품, 베이커리, 음료</span></li>
+            <li><span class="k">물류거점</span><span class="v">전국 32개소</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. NEWS — 4x2 카드 그리드 -->
+  <section class="news section" id="news">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <h2 class="h1">ISSUE CHECK</h2>
+        <p class="section-head__eyebrow subtle">굿스탁이 전하는 유통 산업의 인사이트와 소식입니다.</p>
+      </div>
+      <div class="news__grid">
+        <article class="news-card" data-reveal>
+          <div class="news-card__img img"><span class="news-card__tag">ISSUE CHECK</span></div>
+          <p class="news-card__title body-2">신선식품 유통, 콜드체인 표준화가 답이다</p>
+          <p class="news-card__date">2026.07.31</p>
+        </article>
+        <article class="news-card" data-reveal>
+          <div class="news-card__img img"><span class="news-card__tag">ISSUE CHECK</span></div>
+          <p class="news-card__title body-2">소형 매장의 재고 회전율을 높이는 법</p>
+          <p class="news-card__date">2026.07.24</p>
+        </article>
+        <article class="news-card" data-reveal>
+          <div class="news-card__img img"><span class="news-card__tag">ISSUE CHECK</span></div>
+          <p class="news-card__title body-2">AI 수요예측으로 폐기율 낮춘 사례</p>
+          <p class="news-card__date">2026.07.16</p>
+        </article>
+        <article class="news-card" data-reveal>
+          <div class="news-card__img img"><span class="news-card__tag">ISSUE CHECK</span></div>
+          <p class="news-card__title body-2">굿스탁, 신규 물류거점 5곳 오픈</p>
+          <p class="news-card__date">2026.07.10</p>
+        </article>
+        <article class="news-card" data-reveal>
+          <div class="news-card__img img"><span class="news-card__tag">ISSUE CHECK</span></div>
+          <p class="news-card__title body-2">유통 브랜드가 알아야 할 원가관리 기준</p>
+          <p class="news-card__date">2026.07.03</p>
+        </article>
+        <article class="news-card" data-reveal>
+          <div class="news-card__img img"><span class="news-card__tag">ISSUE CHECK</span></div>
+          <p class="news-card__title body-2">베이커리 유통, 생산량 자동공지 도입 사례</p>
+          <p class="news-card__date">2026.06.26</p>
+        </article>
+        <article class="news-card" data-reveal>
+          <div class="news-card__img img"><span class="news-card__tag">ISSUE CHECK</span></div>
+          <p class="news-card__title body-2">2026 유통 트렌드 리포트 발간</p>
+          <p class="news-card__date">2026.06.18</p>
+        </article>
+        <article class="news-card" data-reveal>
+          <div class="news-card__img img"><span class="news-card__tag">ISSUE CHECK</span></div>
+          <p class="news-card__title body-2">지역 상권 데이터로 보는 입지 전략</p>
+          <p class="news-card__date">2026.06.10</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INSIGHTS/REPORTS — full-bleed 6-6 -->
+  <section class="insights" id="insights">
+    <div class="insights__row">
+      <p class="insights__side insights__side--left" data-reveal>INSIGHTS</p>
+      <div class="insights__center img" data-reveal>
+        <div class="insights__badge">
+          <p class="k">Report</p>
+          <p class="v">2026 유통 트렌드 리포트 Q3</p>
+        </div>
+      </div>
+      <p class="insights__side insights__side--right" data-reveal>REPORTS</p>
+    </div>
+  </section>
+
+  <!-- 6. TRACK RECORDS — full-bleed dark -->
+  <section class="track section">
+    <div class="container">
+      <div class="track__head" data-reveal>
+        <h2 class="h1">TRACK RECORDS</h2>
+        <p class="subtle">고객과의 신뢰를 바탕으로 쌓아온 성과를 이어가겠습니다.</p>
+      </div>
+      <div class="track__stats" data-reveal>
+        <div class="track__stat">
+          <p class="num">150+</p>
+          <p class="label">파트너 브랜드</p>
+        </div>
+        <div class="track__stat">
+          <p class="num">32개</p>
+          <p class="label">전국 물류거점</p>
+        </div>
+        <div class="track__stat">
+          <p class="num">98%</p>
+          <p class="label">재고 정확도</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 7. FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__row">
+      <p class="footer__mark">GOODSTOCK</p>
+      <div class="footer__addr body-2">
+        <p>서울특별시 성동구 성수이로 20길 15</p>
+        <p>02-2003-8600 · info@goodstock.co.kr</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 GOODSTOCK. ALL RIGHTS RESERVED.</span>
+      <span>개인정보처리방침 · 이용약관</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
