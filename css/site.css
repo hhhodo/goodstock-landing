@@ -111,7 +111,7 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
    [태그]헤드라인(20px/600) + 날짜(16px, 원본 Medium→400) 메타 텍스트가 붙는 2단 구조. */
 .news__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--grid-gutter-md);}
 
-.news-card{position:relative;aspect-ratio:446/545;border-radius:16px;overflow:hidden;
+.news-card{position:relative;aspect-ratio:446/545;overflow:hidden;
   padding:32px 28px;display:flex;flex-direction:column;justify-content:flex-end;gap:var(--space-5);}
 .news-card::after{content:"";position:absolute;inset:0;pointer-events:none;
   background-image:linear-gradient(180deg,rgba(20,15,38,.1) 0%,rgba(15,10,31,.5) 20%,
