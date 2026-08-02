@@ -66,8 +66,10 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 }
 
 /* ---------- section head ---------- */
+/* Figma 실측(27:7410 Paragraph): 26px, Pretendard Medium(500) */
 .section-head{margin-bottom:var(--space-7);}
-.section-head__eyebrow{color:var(--text-subtle);margin-top:var(--space-4);}
+.section-head__eyebrow{color:var(--text-default);margin-top:var(--space-4);
+  font-size:26px;font-weight:500;}
 
 /* ---------- services (masonry 4-col) ---------- */
 .services__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--grid-gutter-sm);}
@@ -78,10 +80,12 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 .service-card--even{aspect-ratio:1/1;}
 .service-card--short{aspect-ratio:3/2;}
 .service-card--tall{aspect-ratio:3/4;}
+/* Figma 실측(27:7415): 20px, SemiBold(600), line-height 25px, 그림자 없음 —
+   이전에 임의로 넣은 text-shadow는 치트시트 하드룰(No box-shadow류) 위반이라 제거 */
 .service-card__label{position:absolute;left:0;bottom:0;padding:var(--space-4);color:var(--text-default-inverse);
-  text-shadow:0 1px 8px rgba(0,0,0,.35);}
-.service-card__label .kr{display:block;font-weight:var(--fw-strong);}
-.service-card__label .en{display:block;margin-top:2px;font-size:var(--fs-badge);letter-spacing:.06em;color:var(--text-subtle-inverse);}
+  font-size:20px;font-weight:600;line-height:25px;}
+.service-card__label .kr{display:block;}
+.service-card__label .en{display:block;text-transform:uppercase;}
 
 @media (max-width:1024px){
   .services__grid{grid-template-columns:repeat(2,1fr);}
@@ -92,7 +96,8 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 
 /* ---------- intro (5-7) ---------- */
 .intro__img{aspect-ratio:4/5;}
-.intro__brand{font-weight:var(--fw-strong);margin-bottom:var(--space-5);}
+/* Figma 실측(27:7495 "MATEPLUS"): 36px, SemiBold(600), tracking -0.64px */
+.intro__brand{font-size:36px;font-weight:600;letter-spacing:-0.018em;margin-bottom:var(--space-5);}
 .intro__body{color:var(--text-subtle);margin-bottom:var(--space-6);}
 .intro__list{border-top:var(--border-1);}
 .intro__list li{display:flex;gap:var(--space-6);padding-block:var(--space-4);border-bottom:var(--border-1);}
