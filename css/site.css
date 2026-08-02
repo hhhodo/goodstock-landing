@@ -61,8 +61,8 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
    잡혔던 문제 — auto 마진을 0으로 눌러 순수 padding-inline(50px)만 남김 */
 .hero__content{position:relative;z-index:2;text-align:left;max-width:1200px;margin-inline:0;}
 .hero__title{font-weight:var(--fw-base);word-break:keep-all;
-  font-size:clamp(36px,6vw,120px);line-height:1.02;letter-spacing:-0.01em;}
-.hero__sub{margin-top:var(--space-6);color:var(--text-subtle-inverse);}
+  font-size:clamp(36px,6vw,100px);line-height:1.2;letter-spacing:-0.01em;}
+.hero__sub{margin-bottom:var(--space-6);font-size:20px; color:yellow ;}
 
 .hero__scroll{position:absolute;left:50%;bottom:var(--space-7);transform:translateX(-50%);
   z-index:2;width:1px;height:56px;overflow:hidden;}
@@ -75,6 +75,21 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 }
 @media (prefers-reduced-motion:reduce){
   .hero__scroll-line{animation:none;transform:scaleY(1);}
+}
+
+.video__container {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.video__content{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ---------- section head ---------- */
