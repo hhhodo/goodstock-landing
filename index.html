@@ -168,16 +168,14 @@
     </div>
   </section>
 
-  <!-- 5. INSIGHTS/REPORTS — full-bleed 6-6 -->
+  <!-- 5. INSIGHTS/REPORTS — full-bleed, 흰 배경, 좌우 대형 라벨 + 중앙 세로 이미지
+       (Figma 실측 27:7566: INSIGHTS/REPORTS 120px Regular 블랙, 이미지 500x637 중앙정렬,
+       원본의 "Korea Office Market Report..." 캡션은 별도 텍스트 레이어가 아니라 이미지
+       에셋 안에 합성된 내용이라 오버레이 뱃지 없이 플레이스홀더만 배치) -->
   <section class="insights" id="insights">
     <div class="insights__row">
       <p class="insights__side insights__side--left" data-reveal>INSIGHTS</p>
-      <div class="insights__center img" data-reveal>
-        <div class="insights__badge">
-          <p class="k">Report</p>
-          <p class="v">2026 유통 트렌드 리포트 Q3</p>
-        </div>
-      </div>
+      <span class="insights__center img" data-reveal aria-hidden="true"></span>
       <p class="insights__side insights__side--right" data-reveal>REPORTS</p>
     </div>
   </section>
