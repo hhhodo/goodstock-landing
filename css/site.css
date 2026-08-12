@@ -160,6 +160,15 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 
 /* ---------- intro (5-7) ---------- */
 .intro__img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;}
+
+@media (max-width:768px){
+  /* .grid는 12컬럼을 어떤 화면폭에서도 유지해서(styles.css에 모바일 콜랩스 없음),
+     좁은 화면에서 두 gcell이 옆으로 쪼그라들었음 — 이 인트로 그리드만 세로 스택으로 전환
+     (이미지 gcell이 이미 DOM상 첫번째라 순서 그대로 위/아래) */
+  .intro .grid{display:block;}
+  .intro .grid > .gcell{width:100%;}
+  .intro .grid > .gcell + .gcell{margin-top:var(--space-7);}
+}
 /* Figma 실측(27:7495 "MATEPLUS"): 36px, SemiBold(600), tracking -0.64px */
 .intro__brand{margin-bottom:var(--space-5);}
 .intro__body{color:var(--text-subtle);margin-bottom:80px;}
@@ -232,7 +241,7 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
   .insights__row{grid-template-columns:1fr;gap:var(--space-6);}
   .insights__side{font-size:clamp(28px,9vw,56px);}
   .insights__side--left,.insights__side--right{text-align:center;}
-  .insights__center{width:min(500px,70vw);margin-inline:auto;order:-1;}
+  .insights__center{width:min(500px,70vw);margin-inline:auto;}
 }
 
 /* ---------- track records ---------- */
