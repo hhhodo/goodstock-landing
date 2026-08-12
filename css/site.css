@@ -118,6 +118,12 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 .video__caption p{color:var(--text-default-inverse);font-weight:600;
   font-size:clamp(24px,3.4vw,44px);line-height:1.4;max-width:900px;}
 
+@media (max-width:768px){
+  /* 70vh는 모바일에서 캡션 한 줄 대비 지나치게 커서 위아래로 빈 여백만 늘어짐 */
+  .video__container{height:44vh;min-height:320px;}
+  .video__caption{padding-inline:24px;}
+}
+
 /* ---------- section head ---------- */
 /* Figma 실측(27:7410 Paragraph): 26px, Pretendard Medium(500) */
 .section-head{margin-bottom:var(--space-7);}
@@ -160,7 +166,15 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
 .intro__list{border-top:var(--border-1);}
 .intro__list li{display:flex;gap:var(--space-6);padding-block:var(--space-4);border-bottom:var(--border-1);}
 .intro__list .k{width:9em;flex:none;font-weight:600;}
-.intro__list .v{color:var(--text-subtle);}
+.intro__list .v{min-width:0;color:var(--text-subtle);}
+
+@media (max-width:768px){
+  /* .k(9em 고정폭) 옆에 .v가 flex row로 남으면, 한글은 어디서든 줄바꿈 가능해서
+     min-content가 글자 1개 폭까지 줄어들어 값이 세로로 한 글자씩 쌓이는 버그가 있었음 —
+     좁은 화면에서는 라벨/값을 세로로 쌓아 각자 전체 폭을 쓰게 함 */
+  .intro__list li{flex-direction:column;align-items:flex-start;gap:var(--space-2);}
+  .intro__list .k{width:auto;}
+}
 
 /* ---------- news (4-col x2) ----------
    Figma 실측(27:7972 카드 446x545, 27:7980/27:7982 카드 바깥 메타):
