@@ -187,14 +187,21 @@ h1,h2,h3,h4,.h0,.h1,.h2,.h3{font-weight:var(--fw-base);}
    가 좌우 라벨과 함께 세로 중앙 정렬 */
 .insights{position:relative;background:var(--color-canvas);}
 .insights__row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:var(--space-9);}
-.insights__side{font-size:clamp(28px,6vw,120px);font-weight:var(--fw-base);
-  letter-spacing:-0.01em;color:var(--text-default);}
+/* grid item은 기본 min-width:auto라 긴 단어(AUTOMATED/LOGISTICS 등)가 셀 폭을 무시하고
+   컨테이너 밖으로 밀려나 잘려 보였음 — min-width:0 + overflow-wrap으로 셀 안에서 줄바꿈되게 수정,
+   vw 배율도 낮춰 노트북 폭(1024~1440)에서 글자가 과도하게 커지지 않도록 함 */
+.insights__side{min-width:0;font-size:clamp(24px,4.6vw,120px);font-weight:var(--fw-base);
+  letter-spacing:-0.01em;color:var(--text-default);overflow-wrap:break-word;word-break:break-word;}
 .insights__side--left{text-align:right;}
 .insights__side--right{text-align:left;}
 .insights__center{position:relative;display:block;width:min(500px,32vw);aspect-ratio:500/637;object-fit:cover;}
 
+@media (max-width:1440px){
+  .insights__side{font-size:clamp(22px,3.6vw,64px);}
+}
 @media (max-width:768px){
   .insights__row{grid-template-columns:1fr;gap:var(--space-6);}
+  .insights__side{font-size:clamp(28px,9vw,56px);}
   .insights__side--left,.insights__side--right{text-align:center;}
   .insights__center{width:min(500px,70vw);margin-inline:auto;order:-1;}
 }
